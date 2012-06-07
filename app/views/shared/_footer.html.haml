@@ -28,7 +28,7 @@
       .row
         .span12
           %h4
-            - unless photographer.phone.empty?
+            - unless photographer.phone.blank?
               = enkode(photographer.phone)
               \/
             = enkode_mail(photographer.email, photographer.email)
