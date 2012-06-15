@@ -52,7 +52,10 @@ module Grokphoto
       Devise::UnlocksController.layout 'admin'
       Devise::PasswordsController.layout 'admin'
     end
-    
+
+    # make sure theme over-rides the grokphoto app
+    config.railties_order = [IlluminatedglassTheme::Engine, :main_app, :all]
+
     config.middleware.insert 0, 'Rack::Cache', {
       :verbose     => true,
       :metastore   => URI.encode("file:#{Rails.root}/tmp/dragonfly/cache/meta"),

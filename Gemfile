@@ -52,6 +52,9 @@ gem 'factory_girl_rails', '~> 1.1.0'
 # Used to obsfucate email addresses and phone numbers.
 gem "enkoder_rails", :git => "git://github.com/supapuerco/hivelogic-enkoder-rails.git"
 
+# Use Illuminated Glass theme
+gem 'illuminatedglass-theme', :path => "vendor/engines/illuminatedglass-theme"
+
 # Gems used only for assets and not required
 # In production environments by default.
 group :assets do
