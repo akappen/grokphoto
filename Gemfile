@@ -53,7 +53,7 @@ gem 'factory_girl_rails', '~> 1.1.0'
 gem "enkoder_rails", :git => "git://github.com/supapuerco/hivelogic-enkoder-rails.git"
 
 # Use Illuminated Glass theme
-gem 'illuminatedglass-theme', :path => "vendor/engines/illuminatedglass-theme"
+gem 'illuminatedglass-theme', :git => "git://github.com/akappen/illuminatedglass-theme.git"
 
 # Gems used only for assets and not required
 # In production environments by default.
