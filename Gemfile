@@ -1,7 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.3'
+ruby '1.9.3'
 
+gem 'rails', '3.2.3'
 
 # Needed by heroku
 gem 'thin'
