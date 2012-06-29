@@ -54,6 +54,7 @@ gem "enkoder_rails", :git => "git://github.com/supapuerco/hivelogic-enkoder-rail
 
 # Use Illuminated Glass theme
 gem 'illuminatedglass-theme', :git => "git://github.com/akappen/illuminatedglass-theme.git"
+# gem 'illuminatedglass-theme', :path => "../illuminatedglass-theme"
 
 # Gems used only for assets and not required
 # In production environments by default.
