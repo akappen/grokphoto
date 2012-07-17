@@ -1,6 +1,5 @@
 .DS_Store
 .rvmrc
-db/schema.rb
 db/*.sql
 db/*.sqlite3
 log/*.*
