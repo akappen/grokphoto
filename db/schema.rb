@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120704023729) do
+ActiveRecord::Schema.define(:version => 20120717154858) do
 
   create_table "contact_requests", :force => true do |t|
     t.string   "email",      :limit => 100,                    :null => false
@@ -33,14 +33,14 @@ ActiveRecord::Schema.define(:version => 20120704023729) do
 
   create_table "galleries", :force => true do |t|
     t.integer  "position"
-    t.string   "name",         :limit => 20,                :null => false
+    t.string   "name",                        :null => false
     t.string   "keywords"
     t.text     "description"
     t.string   "cover_uid"
     t.string   "cover_name"
-    t.integer  "photos_count",               :default => 0, :null => false
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
+    t.integer  "photos_count", :default => 0, :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "pages", :force => true do |t|
