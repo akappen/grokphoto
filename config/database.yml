@@ -1,6 +1,8 @@
 common: &common
   adapter: postgresql
   encoding: utf8
+  username: dev
+  password: dev
 
 development:
   <<: *common
