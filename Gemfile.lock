@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/akappen/illuminatedglass-theme.git
-  revision: fc508b3fea9cd9d28b2ca8ca9d7502d5f83ea83f
+  revision: 7a4c4fb03297240de432a8fa111b3ac51f55fe50
   specs:
-    illuminatedglass-theme (0.0.14)
+    illuminatedglass-theme (0.0.15)
       rails (~> 3.2.3)
 
 GIT
@@ -13,7 +13,7 @@ GIT
     annotate (2.4.0)
 
 GIT
-  remote: git://github.com/supapuerco/hivelogic-enkoder-rails.git
+  remote: git://github.com/wilg/hivelogic-enkoder-rails.git
   revision: 91824571a69540c2386686edbdd852234f14412c
   specs:
     enkoder_rails (0.1)
