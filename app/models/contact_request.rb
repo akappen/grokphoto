@@ -20,5 +20,5 @@ class ContactRequest < ActiveRecord::Base
     def log_create_event
       Event.create(:description => "Contact request from: #{email}")
     end
-
+    
 end
