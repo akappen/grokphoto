@@ -49,6 +49,7 @@ gem 'hirefireapp'
 # Use Illuminated Glass theme
 gem 'illuminatedglass-theme', :git => "git://github.com/akappen/illuminatedglass-theme.git"
 # gem 'illuminatedglass-theme', :path => "../illuminatedglass-theme"
+
 gem 'factory_girl_rails', '~> 1.7'
 
 # Gems used only for assets and not required
