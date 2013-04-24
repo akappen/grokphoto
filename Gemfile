@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.11'
 
 # Heroku's web server
-gem 'thin'
+gem 'unicorn'
 
 # Javascript
 gem 'json', '~> 1.6'
