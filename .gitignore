@@ -9,3 +9,4 @@ public/assets
 public/system/dragonfly
 vendor/gems/**/*
 *.swp
+config/deploy.rb
