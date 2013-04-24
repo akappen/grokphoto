@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120717154858) do
+ActiveRecord::Schema.define(:version => 20121108022716) do
 
   create_table "contact_requests", :force => true do |t|
     t.string   "email",      :limit => 100,                    :null => false
@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(:version => 20120717154858) do
     t.text     "conversion_code"
     t.datetime "created_at",                                            :null => false
     t.datetime "updated_at",                                            :null => false
+    t.string   "google_verification"
   end
 
   add_index "photographers", ["email"], :name => "index_photographers_on_email", :unique => true
