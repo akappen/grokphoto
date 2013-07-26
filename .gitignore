@@ -10,3 +10,5 @@ public/system/dragonfly
 vendor/gems/**/*
 *.swp
 config/deploy.rb
+.ruby-gemset
+.ruby-version
