@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/akappen/illuminatedglass-theme.git
-  revision: e02ed2db1cda153eb2d79c2f5e935800c847993e
+  revision: daf05cd2e79bda4826cb819b57a178932ce645fb
   specs:
-    illuminatedglass-theme (0.0.25)
+    illuminatedglass-theme (0.0.26)
       rails (~> 3.2.3)
 
 GEM
