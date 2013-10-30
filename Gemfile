@@ -35,7 +35,8 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 
 # Caching
-gem 'dalli', '~> 1.1'
+gem 'memcachier'
+gem 'dalli'
 
 # Monitoring
 gem 'newrelic_rpm', '~> 3.4'
