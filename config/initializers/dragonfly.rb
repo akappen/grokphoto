@@ -8,8 +8,7 @@ if Rails.env.production?
     c.datastore = Dragonfly::DataStorage::S3DataStore.new(
       :bucket_name => ENV['S3_BUCKET'],
       :access_key_id => ENV['S3_KEY'],
-      :secret_access_key => ENV['S3_SECRET'],
-      :url_host => 'd2e8rib6je7h4k.cloudfront.net'
+      :secret_access_key => ENV['S3_SECRET']
     )
   end
 end
