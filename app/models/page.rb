@@ -15,9 +15,6 @@ class Page < ActiveRecord::Base
     "#{id}-#{name}".parameterize
   end
 
-  # Default ordering
-  default_scope :order => 'name'
-
   # Callbacks
   after_save :clear_cache
   after_create :log_create_event
@@ -29,7 +26,7 @@ class Page < ActiveRecord::Base
 
   def self.cached
     Rails.cache.fetch(CACHED, :expires_in => 1.day) do
-      self.order(:name).all
+      self.order(:id).all
     end
   end
 
