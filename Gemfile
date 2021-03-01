@@ -1,13 +1,13 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '4.0.13'
 
 # Heroku's web server
 gem 'unicorn'
 
 # Javascript
 gem 'json', '~> 1.6'
-gem 'jquery-rails', '~> 1.0'
+gem 'jquery-rails', '~> 2.0'
 
 # Markup / templates
 gem 'rdiscount', '~> 1.6'
@@ -17,34 +17,25 @@ gem 'haml', '~> 3.1'
 gem 'devise', '~> 1.5'
 
 # Responders
-gem 'responders', '~> 0.9'
+gem 'responders', '~> 1.0'
 
 # Ordering
 gem 'acts_as_list', '~> 0.1'
 
 # Forms - TODO: Switch to a stable gem once the wrapper stuff is released.
-gem 'simple_form', '~> 2.0'
+gem 'simple_form', '~> 3.5.1'
 
 # Image uploads
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~> 0.9'
 gem 'fog', '~> 0.1'
 
-# Paging
-gem 'kaminari'
-gem 'kaminari-bootstrap'
-
-# Caching
-gem 'memcachier'
-gem 'dalli'
-
-# Monitoring
 gem 'newrelic_rpm', '~> 3.4'
 
 # Scaling
 gem 'daemons'
-gem 'delayed_job', '~> 3.0'
-gem 'delayed_job_active_record', '~> 0.3'
+gem 'delayed_job', '~> 4.1'
+gem 'delayed_job_active_record', '~> 4.1'
 gem 'hirefireapp'
 
 # Factory
@@ -56,12 +47,10 @@ gem 'factory_girl_rails', '~> 1.7'
 
 # Gems used only for assets and not required
 # In production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2'
-  gem 'coffee-rails', '~> 3.2'
-  gem 'uglifier', '>= 1.0'
-  gem 'execjs', '1.3' # Remove once execjs v1.3.2 or 1.3.1.1
-end
+gem 'sass-rails',   '~> 4.0'
+gem 'coffee-rails', '~> 4.0'
+gem 'uglifier', '>= 1.0'
+gem 'execjs', '1.3' # Remove once execjs v1.3.2 or 1.3.1.1
 
 group :development, :test do
   # Database
