@@ -4,10 +4,10 @@ class Event < ActiveRecord::Base
   validates :description, :presence => true, :length => { :within => 10..255 }
 
   # Mass-assignment protection
-  attr_accessible :description
+  # attr_accessible :description
 
   # Default ordering
-  default_scope :order => 'created_at DESC'
+  default_scope { order('created_at DESC') }
 
   # Callbacks
   after_save :prune

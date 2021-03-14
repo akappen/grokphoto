@@ -6,7 +6,7 @@ class ContactRequestsController < ApplicationController
   end
 
   def create
-    @contact_request = ContactRequest.create(params[:contact_request])
+    @contact_request = ContactRequest.create(params[:contact_request].permit(:email, :name, :message))
     if @contact_request.valid?
       # Send the email
       begin

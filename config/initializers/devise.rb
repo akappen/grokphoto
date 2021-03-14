@@ -87,14 +87,14 @@ Devise.setup do |config|
   config.remember_for = 2.weeks
 
   # If true, a valid remember token can be re-used between multiple browsers.
-  config.remember_across_browsers = true
+  # config.remember_across_browsers = true
 
   # If true, extends the user's remember period when remembered via cookie.
   config.extend_remember_period = true
 
   # If true, uses the password salt as remember token. This should be turned
   # to false if you are not using database authenticatable.
-  config.use_salt_as_remember_token = true
+  # config.use_salt_as_remember_token = true
 
   # Options to be passed to the created cookie. For instance, you can set
   # :secure => true in order to force SSL only cookies.
@@ -207,5 +207,6 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
-
+  
+  config.secret_key = ENV['SECRET_TOKEN'] || '6be96f9f087c738b474c2cd68cb50544134755b9b8addc32d05ce9674395426a0f720c77ed8d39a967eec7b7f75b4ebebe4423a17513f77ffcfc1db0576c387d'
 end

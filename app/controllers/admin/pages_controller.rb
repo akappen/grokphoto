@@ -12,7 +12,7 @@ class Admin::PagesController < Admin::HomeController
   end
 
   def create
-    @page = Page.create(params[:page])
+    @page = Page.create(params[:page].permit(:name, :keywords, :body, :image, :retained_image))
     respond_with :admin, @page
   end
 
@@ -21,7 +21,7 @@ class Admin::PagesController < Admin::HomeController
   end
 
   def update
-    @page.update_attributes params[:page]
+    @page.update_attributes params[:page].permit(:name, :keywords, :body, :image, :retained_image)
     respond_with :admin, @page
   end
 

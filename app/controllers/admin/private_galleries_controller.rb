@@ -22,7 +22,7 @@ class Admin::PrivateGalleriesController < Admin::HomeController
   end
 
   def create
-    @private_gallery = PrivateGallery.create(params[:private_gallery])
+    @private_gallery = PrivateGallery.create(params[:private_gallery].permit(:name, :email, :expires_on, :photos_attrs))
     if @private_gallery.valid?
       respond_with(@private_gallery, :location => edit_admin_private_gallery_path(@private_gallery))
     else
@@ -35,7 +35,7 @@ class Admin::PrivateGalleriesController < Admin::HomeController
   end
 
   def update
-    @private_gallery.update_attributes params[:private_gallery]
+    @private_gallery.update_attributes params[:private_gallery].permit(:name, :email, :expires_on, :photos_attrs)
     if @private_gallery.valid?
       respond_with(@private_gallery, :location => edit_admin_private_gallery_path(@private_gallery))
     else

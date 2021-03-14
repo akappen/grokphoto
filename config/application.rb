@@ -2,6 +2,11 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+module AbstractController
+  class Error < StandardError #:nodoc:
+  end
+end
+
 if defined?(Bundler)
   # Require the gems listed in Gemfile, including any gems
   # you've limited to :test, :development, or :production.

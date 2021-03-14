@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '4.0.13'
+gem 'rails', '4.2.11.3'
 
 # Heroku's web server
 gem 'unicorn'
@@ -14,13 +14,16 @@ gem 'rdiscount', '~> 1.6'
 gem 'haml', '~> 3.1'
 
 # Authentication
-gem 'devise', '~> 1.5'
+gem 'devise', '~> 3.4.0'
+gem 'devise-token_authenticatable', '~> 0.3.0'
 
 # Responders
-gem 'responders', '~> 1.0'
+gem 'responders', '~> 2.0'
 
 # Ordering
 gem 'acts_as_list', '~> 0.1'
+
+gem 'kaminari'
 
 # Forms - TODO: Switch to a stable gem once the wrapper stuff is released.
 gem 'simple_form', '~> 3.5.1'
@@ -29,6 +32,7 @@ gem 'simple_form', '~> 3.5.1'
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~> 0.9'
 gem 'fog', '~> 0.1'
+gem 'dalli'
 
 gem 'newrelic_rpm', '~> 3.4'
 
@@ -54,10 +58,10 @@ gem 'execjs', '1.3' # Remove once execjs v1.3.2 or 1.3.1.1
 
 group :development, :test do
   # Database
-  gem 'sqlite3'
+  # gem 'sqlite3'
 
   # Rspec
-  gem 'rspec-rails', '~> 2.7'
+  gem 'rspec-rails', '~> 4.0'
 end
 
 group :development do
@@ -79,7 +83,5 @@ group :test do
   gem 'database_cleaner', '~> 0.8'
 end
 
-group :production do
-  # Database
-  gem 'pg'
-end
+# Database
+gem 'pg', '~> 0.15'

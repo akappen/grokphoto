@@ -7,7 +7,7 @@ class Admin::PhotographersController < Admin::HomeController
   end
 
   def update
-    @photographer.update_attributes params[:photographer]
+    @photographer.update_attributes params[:photographer].permit(:email, :password, :name, :tagline, :time_zone, :description, :phone, :portfolio_url, :blog_url, :facebook_url, :twitter_url, :google_analytics_key, :google_verification, :conversion_code, :remember_me)
     if @photographer.valid?
       respond_with(@photographer, :location => edit_admin_photographer_path)
     else

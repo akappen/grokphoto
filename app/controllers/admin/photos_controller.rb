@@ -27,7 +27,7 @@ class Admin::PhotosController < Admin::HomeController
   end
 
   def update
-    @photo.update_attributes(params[:photo])
+    @photo.update_attributes(params[:photo].permit(:position, :photo, :photo_cache, :name))
     respond_with :admin, @photo
   end
 

@@ -14,7 +14,7 @@ class Gallery < ActiveRecord::Base
   validates :cover, :presence => true
 
   # Mass-assignment protection
-  attr_accessible :name, :keywords, :description, :cover, :photos_attrs
+  # attr_accessible :name, :keywords, :description, :cover, :photos_attrs
 
   # Multi-file uploads
   def photos_attrs=(attrs)
@@ -27,7 +27,7 @@ class Gallery < ActiveRecord::Base
   end
 
   # Default ordering
-  default_scope :order => 'position, id'
+  default_scope { order('position, id') }
 
   # Callbacks
   after_save :clear_cache

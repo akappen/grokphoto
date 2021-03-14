@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   validates :body, :presence => true, :length => { :minimum => 10 }
 
   # Mass-assignment protection
-  attr_accessible :title, :keywords, :body, :image, :retained_image
+  # attr_accessible :title, :keywords, :body, :image, :retained_image
 
   # Image attachment
   image_accessor :image
@@ -16,7 +16,7 @@ class Post < ActiveRecord::Base
   end
 
   # Default ordering
-  default_scope :order => 'created_at DESC'
+  default_scope { order('created_at DESC') }
 
   # Callbacks
   after_save :clear_cache

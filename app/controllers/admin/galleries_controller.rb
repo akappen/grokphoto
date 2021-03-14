@@ -12,7 +12,7 @@ class Admin::GalleriesController < Admin::HomeController
   end
 
   def create
-    @gallery = Gallery.create(params[:gallery])
+    @gallery = Gallery.create(params[:gallery].permit(:name, :keywords, :description, :cover, :photos_attrs))
     if @gallery.valid?
       respond_with(@gallery, :location => edit_admin_gallery_path(@gallery))
     else
@@ -25,7 +25,7 @@ class Admin::GalleriesController < Admin::HomeController
   end
 
   def update
-    @gallery.update_attributes params[:gallery]
+    @gallery.update_attributes params[:gallery].permit(:name, :keywords, :description, :cover, :photos_attrs)
     if @gallery.valid?
       respond_with(@gallery, :location => edit_admin_gallery_path(@gallery))
     else

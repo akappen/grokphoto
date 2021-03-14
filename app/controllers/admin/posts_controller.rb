@@ -20,7 +20,7 @@ class Admin::PostsController < Admin::HomeController
   end
 
   def create
-    @post = Post.create(params[:post])
+    @post = Post.create(params[:post].permit(:title, :keywords, :body, :image, :retained_image))
     respond_with :admin, @post
   end
 
@@ -29,7 +29,7 @@ class Admin::PostsController < Admin::HomeController
   end
 
   def update
-    @post.update_attributes params[:post]
+    @post.update_attributes params[:post].permit(:title, :keywords, :body, :image, :retained_image)
     respond_with :admin, @post
   end
 
