@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+ruby "2.4.10"
+
 gem 'rails', '4.2.11.3'
 
 # Heroku's web server
