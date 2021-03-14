@@ -2,7 +2,7 @@ class Gallery < ActiveRecord::Base
   acts_as_list
 
   # Associations
-  has_many :photos, :as => :photoable, :dependent => :destroy, :order => :position
+  has_many :photos, :as => :photoable, :dependent => :destroy, -> { order(:position) }
 
   # Cover image attachment
   image_accessor :cover
