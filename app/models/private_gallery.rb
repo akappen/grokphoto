@@ -1,7 +1,7 @@
 class PrivateGallery < ActiveRecord::Base
 
   # Associations
-  has_many :photos, :as => :photoable, :dependent => :destroy, -> { order(:position) }
+  has_many :photos, -> { order(:position) }, :as => :photoable, :dependent => :destroy
 
   # Virtual attribute for sending email invitations.
   attr_accessor :email
