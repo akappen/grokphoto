@@ -9,8 +9,8 @@ class ContactRequest < ActiveRecord::Base
   # attr_accessible :email, :name, :message
 
   # Named scopes
-  scope :unread, where(:read => false)
-  scope :read, where(:read => true)
+  scope :unread, -> { where(:read => false) }
+  scope :read, -> { where(:read => true) }
 
   # Logging
   after_create :log_create_event

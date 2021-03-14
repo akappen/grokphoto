@@ -14,8 +14,8 @@ class PrivateGallery < ActiveRecord::Base
   # attr_accessible :name, :email, :expires_on, :photos_attrs
 
   # Named scopes
-  scope :active, where("expires_on >= ?", Time.now)
-  scope :expired, where("expires_on < ?", Time.now)
+  scope :active, -> { where("expires_on >= ?", Time.now) }
+  scope :expired, -> { where("expires_on < ?", Time.now) }
 
   # Multi-file uploads
   def photos_attrs=(attrs)
