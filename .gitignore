@@ -12,3 +12,4 @@ vendor/gems/**/*
 config/deploy.rb
 .ruby-gemset
 .ruby-version
+.bundle/
