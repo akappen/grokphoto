@@ -42,7 +42,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    acts_as_list (0.1.9)
+    acts_as_list (0.9.19)
+      activerecord (>= 3.0)
     ansi (1.4.3)
     arel (6.0.4)
     bcrypt (3.1.16)
@@ -281,6 +282,9 @@ DEPENDENCIES
   turn (~> 0.8)
   uglifier (>= 1.0)
   unicorn
+
+RUBY VERSION
+   ruby 2.4.10p364
 
 BUNDLED WITH
    1.17.3
